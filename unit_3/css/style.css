@@ -1,0 +1,89 @@
+/* Colors
+sage green: #91bc9b;
+accent blue: #246fa3;
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #91bc9b;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.3;
+  color: #222;
+  width: 80%;
+  margin: auto;
+}
+
+header {
+
+  color: #fff;
+
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 10px 0;
+}
+
+h1 {
+  color: #fff;
+  font-size: 36px;
+}
+
+main {
+  background-color: #fff;
+}
+
+section {
+  border-bottom: 1px solid #246fa3;
+  padding: 20px;
+}
+
+blockquote {
+  background-color: #eee;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+ul {
+  padding: 10px 20px;
+}
+
+a {
+  color: #246fa3;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+#hero {
+  background-image: url("../images/bluestem-cropped.png");
+  background-size: cover;
+  height: 350px;
+  text-align: center;
+  line-height: 350px;
+}
+
+#slogan {
+  font-style: italic;
+  color: #fff;
+  font-size: 24px;
+}
+
+#treatment {
+  list-style-type: none;
+}
+
+#treatment li {
+  background-color: #91bc9b;
+  padding: 10px;
+  margin: 10px 0;
+  color: #fff;
+  display: inline-block;
+}
