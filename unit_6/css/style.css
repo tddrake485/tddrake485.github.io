@@ -21,13 +21,11 @@ body {
 }
 
 header {
-  /* background-color: #91bc9b; */
   background-image: url("../images/bluestem-cropped.png");
   background-size: cover;
   width: 100%;
   text-align: center;
   height: 400px;
-  /* line-height: 5em; */
   margin-bottom: 20px;
 }
 
@@ -58,10 +56,8 @@ main {
 }
 
 section {
-  /* border-bottom: 1px solid #246fa3; */
   padding: 20px;
   margin-bottom: 20px;
-  /* background-color: #FFE2B8; */
 }
 
 blockquote {
@@ -101,7 +97,6 @@ footer {
   text-align: center;
   padding: 20px;
   background-color: #eee;
-  /* background-color: #FF957E; */
 }
 
 #slogan {
@@ -153,17 +148,4 @@ footer {
   content: " ";
   clear: both;
   height: 0;
-}
-
-.treatment {
-  list-style-type: none;
-  margin: 0;
-}
-
-.treatment li {
-  background-color: #91bc9b;
-  padding: 10px;
-  margin: 10px 0;
-  color: #fff;
-  display: inline-block;
 }
