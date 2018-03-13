@@ -1,0 +1,249 @@
+/* Colors
+sage green: #91bc9b;
+accent blue: #246fa3;
+*/
+
+/* 1 em = default 16px */
+/* recommended line length = 30 em */
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Quicksand');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #222;
+}
+
+header {
+  background-image: url("../images/bluestem-cropped.png");
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  height: 400px;
+  margin-bottom: 1.5em;
+}
+
+h1, h2, h3 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.5em;
+  margin: auto;
+  padding-top: 4em;
+  padding-bottom: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
+  text-align: center;
+  border-bottom: 1px dashed #91bc9b;
+  padding-bottom: .5em;
+  margin-bottom: 1em;
+}
+
+main {
+  background-color: #fff;
+  width: 80%;
+  margin: auto;
+}
+
+section {
+  /* padding: 1.5em; */
+  margin-bottom: 1.5em;
+}
+
+blockquote {
+  background-color: #eee;
+  padding: 1.25em;
+  margin: 1em 0;
+}
+
+ul {
+  margin: 1em 1.25em 2em 1.25em;
+}
+
+a {
+  color: #246fa3;
+  text-decoration: none;
+  border-bottom: 1px solid #246fa3;
+  padding-bottom: 2px;
+}
+
+header button {
+  display: none;
+}
+
+nav {
+  margin: 2em 0;
+}
+
+nav a:link {
+  background-color: #91bc9b;
+  color: #fff;
+  border: none;
+  padding: .5em 1.5em;
+}
+
+nav a:hover {
+  background-color: #246fa3;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+}
+
+#slogan {
+  /* font-style: italic; */
+  color: #fff;
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  /* position: relative; */
+  max-width: 80%;
+  margin: auto;
+}
+
+#site-nav {
+  width: 80%;
+  margin: 0 auto 2em;
+  text-align: center;
+}
+
+#site-nav a {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#left {
+  /* background-color: #E582A2; */
+  /* border: 1px black solid; */
+  /* padding: 20px; */
+  float: left;
+  width: 52%;
+}
+
+#right {
+  /* background-color: #E55B88; */
+  /* border: 1px black solid; */
+  /* padding: 20px; */
+  float: right;
+  width: 40%;
+}
+
+#profile-image-full-size {
+  float: right;
+  margin: 0 0 1em 1.5em;
+  max-width: 20em;
+}
+#profile-image-tablet {
+  display: none;
+}
+
+#call-to-action {
+  text-align: center;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+@media only screen and (max-width: 891px) {
+  nav a:link {
+    padding: .5em 1em;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    font-size: 1.2em;
+  }
+  header {
+    background-image: none;
+    background-color: #91bc9b;
+    width: 100%;
+    text-align: left;
+    height: auto;
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  h1 {
+    font-size: 2em;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex: 1;
+    margin: 0;
+    padding: .5em;
+  }
+  header button {
+    display: block;
+    font-size: 2em;
+    color: #fff;
+    flex: 1;
+    max-width: 2em;
+    background-color: #91bc9b;
+    border: none;
+    /* padding-top: 1em;
+    padding-bottom: 1em; */
+  }
+  #site-nav {
+    margin: -1.5em 0 1.5em 0;
+    position: relative;
+    right: 0;
+    width: 100%;
+  }
+  #site-nav a {
+    display: block;
+    width: 100%;
+    font-size: 1.2em;
+    border-top: 1px solid #eee;
+    padding: 1em;
+  }
+  main {
+    background-color: #fff;
+    width: 90%;
+  }
+  #slogan {
+    display: none;
+  }
+  #left, #right {
+    float: none;
+    width: 100%;
+  }
+  #profile-image-full-size {
+    display: none;
+    float: none;
+  }
+  #profile-image-tablet {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 1.5em;
+  }
+  #call-to-action nav {
+    display: block;
+  }
+}
+@media only screen and (max-width: 451px) {
+  h1 {
+    font-size: 1.75em;
+  }
+  header button {
+    font-size: 1.75em;
+  }
