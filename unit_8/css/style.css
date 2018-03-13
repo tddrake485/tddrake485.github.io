@@ -57,7 +57,7 @@ main {
 
 section {
   /* padding: 1.5em; */
-  margin-bottom: 1.5em;
+  margin-bottom: 3em;
 }
 
 blockquote {
@@ -138,6 +138,10 @@ footer {
   /* padding: 20px; */
   float: right;
   width: 40%;
+}
+
+#left ul, #right ul {
+  margin-bottom: 0;
 }
 
 #profile-image-full-size {
@@ -226,6 +230,9 @@ footer {
   #left, #right {
     float: none;
     width: 100%;
+  }
+  #left ul, #right ul {
+    margin-bottom: 2em;
   }
   #profile-image-full-size {
     display: none;
