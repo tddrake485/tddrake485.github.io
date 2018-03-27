@@ -1,0 +1,21 @@
+#hero {
+  background-image: url("../images/bluestem-400h1280w.png");
+  background-size: cover;
+  width: 100%;
+  margin-bottom: 1em;
+  blockquote {
+    color: white;
+    padding: 5em;
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: .1em .1em .2em $text-color;
+    max-width: 60%;
+    margin: auto;
+    p {
+      font-size: 1.5em;
+      line-height: 1.6;
+    }
+    p + p {
+      text-align: right;
+    }
+  }
+}

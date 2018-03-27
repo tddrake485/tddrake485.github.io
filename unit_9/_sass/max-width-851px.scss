@@ -1,0 +1,22 @@
+@media only screen and (max-width: 851px) {
+  #hero {
+    background-image: none;
+    background-color: $sage-green;
+    blockquote {
+      padding: 1em;
+      max-width: 80%;
+      p {
+        font-size: 1.5em;
+        line-height: 1.6;
+      }
+    }
+  }
+  section {
+    width: 85%;
+  }
+  #profile-image {
+    float: none;
+    display: block;
+    margin: auto;
+  }
+}
