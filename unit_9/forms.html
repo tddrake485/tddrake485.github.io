@@ -1,13 +1,86 @@
----
-title: Forms
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Anne Drake, LCSW - Counseling and Play Therapy</title>
+  </head>
+  <body>
+    <header class="clearfix">
+      <h1>Anne Drake, LCSW - Counseling and Play Therapy</h1>
+      <a href="index.html"><img src="images/anne-drake-lcsw-logo-400x74.png" alt="Anne Drake, LCSW - Counseling and Play Therapy" title="Anne Drake, LCSW - Counseling and Play Therapy" id="logo"></a>
+      <nav id="nav-items">
+        <a href="about.html" class="nav-item"><i class="fas fa-info-circle fa-fw"></i>&nbsp;About Me</a>
+        <a href="forms.html" class="nav-item"><i class="fab fa-wpforms fa-fw"></i></i>&nbsp;Forms</a>
+        <a href="payments.html" class="nav-item"><i class="fas fa-dollar-sign fa-fw"></i>&nbsp;Payment Policies</a>
+        <!-- <a href="#" class="nav-item"><i class="far fa-bookmark fa-fw"></i>&nbsp;Resources</a> -->
+        <a href="faqs.html" class="nav-item"><i class="far fa-question-circle fa-fw"></i>&nbsp;FAQs</a>
+      </nav>
+    </header>
 
-<section>
-  <h2>{{ page.title }}</h2>
+    <section id="hero">
+      <blockquote class="clearfix">
+        <p>&ldquo;You can discover more about a person in an hour of play than in a year of conversation.&rdquo;</p>
+        <p>&mdash; Plato</p>
+      </blockquote>
+    </section>
+    <main>
+      <section>
+  <h2>Forms</h2>
   <p>Please download, print, and complete the following paperwork prior to your first appointment.</p>
-  {% for form in site.data.forms %}
+
   <ul class="pdf-list">
-    <li><i class="far fa-file-pdf fa-fw"></i>&nbsp;<a href="{{ site.baseurl }}/forms/{{ form.filename }}">{{ form.title }}</a></li>
+    <li><i class="far fa-file-pdf fa-fw"></i>&nbsp;<a href="forms/intake-form.pdf">New Patient Intake Form</a></li>
   </ul>
-  {% endfor %}
+
+  <ul class="pdf-list">
+    <li><i class="far fa-file-pdf fa-fw"></i>&nbsp;<a href="forms/financial-policy.pdf">Financial Policy</a></li>
+  </ul>
+
+  <ul class="pdf-list">
+    <li><i class="far fa-file-pdf fa-fw"></i>&nbsp;<a href="forms/hipaa.pdf">HIPAA - Rights to Privacy Information</a></li>
+  </ul>
+
+  <ul class="pdf-list">
+    <li><i class="far fa-file-pdf fa-fw"></i>&nbsp;<a href="forms/informed-consent.pdf">Informed Consent</a></li>
+  </ul>
+
+  <ul class="pdf-list">
+    <li><i class="far fa-file-pdf fa-fw"></i>&nbsp;<a href="forms/release-of-information.pdf">Release of Protective Health Information</a></li>
+  </ul>
+
 </section>
+
+    </main>
+    <footer>
+      <div id="footer-content" class="clearfix">
+        <div class="left">
+          <p><i class="far fa-copyright fa-fw"></i>&nbsp;2018 Anne Drake, LCSW</p>
+          <p><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;Website by Tom Drake</p>
+        </div>
+        <div class="right">
+          <div class="icon-box">
+            <div class="icon-img">
+              <i class="far fa-envelope fa-fw"></i>
+            </div>
+            <div class="icon-content">
+              <a href="mailto:annedrakelcsw@gmail.com">annedrakelcsw@gmail.com</a>
+            </div>
+          </div>
+          <div class="icon-box">
+            <div class="icon-img">
+              <i class="fas fa-map-marker-alt fa-fw"></i>
+            </div>
+            <div class="icon-content">
+              <address>7627 Lake St Suite 217, River Forest, IL 60305</address>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <p id="author">Website by Tom Drake</p> -->
+    </footer>
+  </body>
+</html>
