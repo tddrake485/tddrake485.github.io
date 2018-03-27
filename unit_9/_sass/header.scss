@@ -1,0 +1,32 @@
+header{
+  width: 80%;
+  margin: 1em auto;
+  #logo {
+    max-width: 400px;
+    width: 100%;
+  }
+  nav {
+    float: right;
+    margin-top: 1em;
+
+    a:link {
+      padding: 1em .5em .5em .5em;
+      color: $text-color;
+      min-width: 6.5em;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 400;
+      // font-size: .8em;
+      border-bottom: 2px solid white;
+
+    }
+    a:visited {
+      color: $text-color;
+      border-bottom: 2px solid white;
+    }
+    a:hover {
+      border-bottom: 2px solid $sage-green;
+      color: $sage-green;
+    }
+  }
+}
