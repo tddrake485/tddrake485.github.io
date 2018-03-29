@@ -23,8 +23,8 @@
 
     <section id="hero">
       <blockquote class="clearfix">
-        <p>&ldquo;<span id="quote-content">You can discover more about a person in an hour of play than in a year of conversation.</span>&rdquo;</p>
-        <p>&mdash; <span id="quote-source">Plato</span></p>
+        <p>&ldquo;<span id="quote-content"></span>&rdquo;</p>
+        <p>&mdash; <span id="quote-source"></span></p>
       </blockquote>
     </section>
     <main>
@@ -59,8 +59,15 @@
     <script type="text/javascript">
       var quotes = {{ site.data.quotes | jsonify }}
       var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-      document.getElementById("quote-content").innerHTML = randomQuote.content;
-      document.getElementById("quote-source").innerHTML = randomQuote.source;
+      var quoteContentTag = document.getElementById("quote-content");
+      var quoteSourceTag = document.getElementById("quote-source");
+      if (document.getElementsByTagName("H2")[0].textContent == "Services") {
+        quoteContentTag.innerHTML = "Enter into children's play and you will find the place where their minds, hearts, and souls meet.";
+        quoteSourceTag.innerHTML = "Virginia Axline";
+      } else {
+        quoteContentTag.innerHTML = randomQuote.content;
+        quoteSourceTag.innerHTML = randomQuote.source;
+      }
     </script>
 
   </body>
