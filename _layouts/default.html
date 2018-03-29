@@ -12,19 +12,19 @@
     <header class="clearfix">
       <h1>{{ site.title }}</h1>
       <a href="index.html"><img src="{{ site.baseurl }}/images/anne-drake-lcsw-logo-400x74.png" alt="{{ site.title }}" title="{{ site.title }}" id="logo"></a>
-      <nav id="nav-items">
-        <a href="about.html" class="nav-item"><i class="fas fa-info-circle fa-fw"></i>&nbsp;About Me</a>
-        <a href="forms.html" class="nav-item"><i class="fab fa-wpforms fa-fw"></i></i>&nbsp;Forms</a>
-        <a href="payments.html" class="nav-item"><i class="fas fa-dollar-sign fa-fw"></i>&nbsp;Payment Policies</a>
-        <!-- <a href="#" class="nav-item"><i class="far fa-bookmark fa-fw"></i>&nbsp;Resources</a> -->
-        <a href="faqs.html" class="nav-item"><i class="far fa-question-circle fa-fw"></i>&nbsp;FAQs</a>
+      <nav>
+        <a href="about.html"><i class="fas fa-info-circle fa-fw"></i>&nbsp;About Me</a>
+        <a href="forms.html"><i class="fab fa-wpforms fa-fw"></i></i>&nbsp;Forms</a>
+        <a href="payments.html"><i class="fas fa-dollar-sign fa-fw"></i>&nbsp;Payment Policies</a>
+        <!-- <a href="#"><i class="far fa-bookmark fa-fw"></i>&nbsp;Resources</a> -->
+        <a href="faqs.html"><i class="far fa-question-circle fa-fw"></i>&nbsp;FAQs</a>
       </nav>
     </header>
 
     <section id="hero">
       <blockquote class="clearfix">
-        <p>&ldquo;You can discover more about a person in an hour of play than in a year of conversation.&rdquo;</p>
-        <p>&mdash; Plato</p>
+        <p>&ldquo;<span id="quote-content">You can discover more about a person in an hour of play than in a year of conversation.</span>&rdquo;</p>
+        <p>&mdash; <span id="quote-source">Plato</span></p>
       </blockquote>
     </section>
     <main>
@@ -55,7 +55,13 @@
           </div>
         </div>
       </div>
-      <!-- <p id="author">Website by Tom Drake</p> -->
     </footer>
+    <script type="text/javascript">
+      var quotes = {{ site.data.quotes | jsonify }}
+      var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote-content").innerHTML = randomQuote.content;
+      document.getElementById("quote-source").innerHTML = randomQuote.source;
+    </script>
+
   </body>
 </html>
