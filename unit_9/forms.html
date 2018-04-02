@@ -12,19 +12,19 @@
     <header class="clearfix">
       <h1>Anne Drake, LCSW - Counseling and Play Therapy</h1>
       <a href="index.html"><img src="images/anne-drake-lcsw-logo-400x74.png" alt="Anne Drake, LCSW - Counseling and Play Therapy" title="Anne Drake, LCSW - Counseling and Play Therapy" id="logo"></a>
-      <nav id="nav-items">
-        <a href="about.html" class="nav-item"><i class="fas fa-info-circle fa-fw"></i>&nbsp;About Me</a>
-        <a href="forms.html" class="nav-item"><i class="fab fa-wpforms fa-fw"></i></i>&nbsp;Forms</a>
-        <a href="payments.html" class="nav-item"><i class="fas fa-dollar-sign fa-fw"></i>&nbsp;Payment Policies</a>
-        <!-- <a href="#" class="nav-item"><i class="far fa-bookmark fa-fw"></i>&nbsp;Resources</a> -->
-        <a href="faqs.html" class="nav-item"><i class="far fa-question-circle fa-fw"></i>&nbsp;FAQs</a>
+      <nav>
+        <a href="about.html"><i class="fas fa-info-circle fa-fw"></i>&nbsp;About Me</a>
+        <a href="forms.html"><i class="fab fa-wpforms fa-fw"></i></i>&nbsp;Forms</a>
+        <a href="payments.html"><i class="fas fa-dollar-sign fa-fw"></i>&nbsp;Payment Policies</a>
+        <!-- <a href="#"><i class="far fa-bookmark fa-fw"></i>&nbsp;Resources</a> -->
+        <a href="faqs.html"><i class="far fa-question-circle fa-fw"></i>&nbsp;FAQs</a>
       </nav>
     </header>
 
     <section id="hero">
       <blockquote class="clearfix">
-        <p>&ldquo;You can discover more about a person in an hour of play than in a year of conversation.&rdquo;</p>
-        <p>&mdash; Plato</p>
+        <p>&ldquo;<span id="quote-content"></span>&rdquo;</p>
+        <p>&mdash; <span id="quote-source"></span></p>
       </blockquote>
     </section>
     <main>
@@ -38,10 +38,6 @@
 
   <ul class="pdf-list">
     <li><i class="far fa-file-pdf fa-fw"></i>&nbsp;<a href="forms/financial-policy.pdf">Financial Policy</a></li>
-  </ul>
-
-  <ul class="pdf-list">
-    <li><i class="far fa-file-pdf fa-fw"></i>&nbsp;<a href="forms/hipaa.pdf">HIPAA - Rights to Privacy Information</a></li>
   </ul>
 
   <ul class="pdf-list">
@@ -80,7 +76,20 @@
           </div>
         </div>
       </div>
-      <!-- <p id="author">Website by Tom Drake</p> -->
     </footer>
+    <script type="text/javascript">
+      var quotes = [{"content":"Children need someone to reassure them that their own, unique imaginative play is something to be valued.","source":"Fred Rogers"},{"content":"Play is a child's work and this is not a trivial pursuit.","source":"Alfred Adler"},{"content":"Play is the highest expression of human development in childhood, for it alone is the free expression of what is in a child's soul.","source":"Friedrich Froebel"},{"content":"You can discover more about a person in an hour of play than in a year of conversation.","source":"Plato"}]
+      var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      var quoteContentTag = document.getElementById("quote-content");
+      var quoteSourceTag = document.getElementById("quote-source");
+      if (document.getElementsByTagName("H2")[0].textContent == "Services") {
+        quoteContentTag.innerHTML = "Enter into children's play and you will find the place where their minds, hearts, and souls meet.";
+        quoteSourceTag.innerHTML = "Virginia Axline";
+      } else {
+        quoteContentTag.innerHTML = randomQuote.content;
+        quoteSourceTag.innerHTML = randomQuote.source;
+      }
+    </script>
+
   </body>
 </html>
