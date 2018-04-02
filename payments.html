@@ -5,7 +5,12 @@ title: Payment Policies
 <section>
   <h2>{{ page.title }}</h2>
   <p>Payment is due at time of service.</p>
-  {% include note.html content="Unfortunately, we are not currently part of an insurance network. We are in the process of joining the Blue Cross Blue Shield of Illinois network. This page will be updated with the appropriate information when it is available." %}
+  {% for entry in site.data.faqs %}
+    {% if entry.question == "Do you accept insurance?" %}
+      {% include note.html content=entry.answer %}
+    {% endif %}
+  {% endfor %}
+
 </section>
 <section>
   <h3>Session Fees</h3>
@@ -22,7 +27,7 @@ title: Payment Policies
         <td>
           <ul>
             <li>Up to 30 minutes free of charge</li>
-            <li>&#36; for each additional 15 minutes</li>
+            <li>&#36;15 for each additional 15 minutes</li>
           </ul>
         </td>
       </tr>
@@ -39,7 +44,7 @@ title: Payment Policies
 </section>
 <section>
   <h3>Cancellation &amp; No-Show Policy</h3>
-  <p>Although we recognize that unanticipated conflicts sometimes arise, it is the expectation that you will contact Anne Drake, LCSW, to cancel scheduled appointments. If you do not show for an appointment or do not contact Anne Drake, LCSW, to cancel the appointment 24 hours in advance, a &#36;45 Cancellation Fee will be charged to your debit/credit card on file. Cancellation due to emergency, sudden illness, or severe weather will be considered exceptions.</p>
+  <p>Although unanticipated conflicts sometimes arise, it is the expectation that you will contact Anne Drake, LCSW to cancel scheduled appointments. 24-hour notice is required for cancellations. If you do not cancel and then do not come to an appointment, a &#36;45 Cancellation Fee will be charged to your debit/credit card on file. Cancellation due to emergency, sudden illness, or severe weather may be considered exceptions. More than 3 missed appointments in one month may result in losing your reserved time.</p>
 </section>
 <section>
   <h3>Phone &amp; Email Communication</h3>
@@ -73,13 +78,16 @@ title: Payment Policies
 </section>
 <section>
   <h3>Out-of-network Insurance</h3>
-  <p>For out-of-network insurance plans, you will be provided with a receipt that you can turn in to your insurance company for reimbursement, according to your plan specifications.</p>
+  <p>For out-of-network insurance plans, you will be provided with a receipt, known as a superbill, that you
+can turn into your insurance company for reimbursement, according to your plan specifications.</p>
 </section>
 <section>
   <h3>Payment Methods</h3>
-  <p>Payment by cash or check is due at the time of service. A receipt will be provided by email the Monday following service. Payment made by credit card will be charged on the Monday following service with an emailed receipt as confirmation. Please note that a &#36;25 fee will be added to your account for each check that is returned.</p>
+  <p>Payment by cash or check is due at the time of service and the receipt will be provided by email following the service. Please note that a &#36;25.00 fee will be added to your account for each check that is returned.</p>
+  <p>Payment made by credit card will be charged following the service with an emailed receipt as confirmation. Payment made by credit will be assessed a 2&#37; service fee to cover the cost of transactions.</p>
+  <p>Anne Drake, LCSW, contracts with ANE Credentialing and Billing to process all payments. ANE Credentialing and Billing has an authorized Business Associates Agreement with Anne Drake, LCSW, to comply with HIPAA requirements to protect your health and financial information.</p>
 </section>
 <section>
   <h3>Debit/Credit Card</h3>
-  <p>It is required that a debit/credit card is kept on file. All debit/credit card information is kept securely. Regular session fees will not be charged to this card without your permission.</p>
+  <p>It is required that a debit/credit card is kept on file. All debit/credit card information is kept securely. Regular session fees <strong>will not</strong> be charged to this card without your permission.</p>
 </section>
