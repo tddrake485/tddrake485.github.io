@@ -45,6 +45,10 @@ p {
   margin-bottom: 1em;
 }
 
+p + h3 {
+  margin-top: 1em;
+}
+
 p:last-child {
   margin-bottom: 0;
 }
