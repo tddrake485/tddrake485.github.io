@@ -2,73 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{site.baseurl}}/css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+    <title>{{ site.title }} - {{ site.slogan }}</title>
   </head>
   <body>
-    <header class="clearfix">
-      <h1>{{ site.title }}</h1>
-      <a href="index.html"><img src="{{ site.baseurl }}/images/anne-drake-lcsw-logo-400x74.png" alt="{{ site.title }}" title="{{ site.title }}" id="logo"></a>
-      <nav>
-        <a href="about.html"><i class="fas fa-info-circle fa-fw"></i>&nbsp;About Me</a>
-        <a href="forms.html"><i class="fab fa-wpforms fa-fw"></i></i>&nbsp;Forms</a>
-        <a href="payments.html"><i class="fas fa-dollar-sign fa-fw"></i>&nbsp;Payment Policies</a>
-        <!-- <a href="#"><i class="far fa-bookmark fa-fw"></i>&nbsp;Resources</a> -->
-        <a href="faqs.html"><i class="far fa-question-circle fa-fw"></i>&nbsp;FAQs</a>
-      </nav>
+    <header>
+      <h1></h1>
     </header>
-
-    <section id="hero">
-      <blockquote class="clearfix">
-        <p>&ldquo;<span id="quote-content"></span>&rdquo;</p>
-        <p>&mdash; <span id="quote-source"></span></p>
-      </blockquote>
-    </section>
+    <nav>
+      <a href="#">Experience</a>
+      <a href="#">Education</a>
+      <a href="#">Skills</a>
+      <a href="#">Honors</a>
+      <a href="#">Interests</a>
+    </nav>
     <main>
       {{ content }}
     </main>
     <footer>
-      <div id="footer-content" class="clearfix">
-        <div class="left">
-          <p><i class="far fa-copyright fa-fw"></i>&nbsp;2018 Anne Drake, LCSW</p>
-          <p><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;Website by Tom Drake</p>
-        </div>
-        <div class="right">
-          <div class="icon-box">
-            <div class="icon-img">
-              <i class="far fa-envelope fa-fw"></i>
-            </div>
-            <div class="icon-content">
-              <a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
-            </div>
-          </div>
-          <div class="icon-box">
-            <div class="icon-img">
-              <i class="fas fa-map-marker-alt fa-fw"></i>
-            </div>
-            <div class="icon-content">
-              <address>{{ site.data.contact.street }} {{ site.data.contact.unit }}, {{ site.data.contact.city }}, {{ site.data.contact.state }} {{ site.data.contact.zip }}</address>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script type="text/javascript">
-      var quotes = {{ site.data.quotes | jsonify }}
-      var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-      var quoteContentTag = document.getElementById("quote-content");
-      var quoteSourceTag = document.getElementById("quote-source");
-      if (document.getElementsByTagName("H2")[0].textContent == "Services") {
-        quoteContentTag.innerHTML = "Enter into children's play and you will find the place where their minds, hearts, and souls meet.";
-        quoteSourceTag.innerHTML = "Virginia Axline";
-      } else {
-        quoteContentTag.innerHTML = randomQuote.content;
-        quoteSourceTag.innerHTML = randomQuote.source;
-      }
-    </script>
-
+      <p>&copy; 2018 Tom Drake</p>
+      <p>This site was built with the <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> static site generator. All HTML and CSS was hand-coded from scratch by me.</p>
+      </footer>
   </body>
 </html>

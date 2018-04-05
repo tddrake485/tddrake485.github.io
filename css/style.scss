@@ -2,37 +2,8 @@
 title: CSS file
 ---
 
-$sage-green: #91bc9b;
-$accent-blue: #246fa3;
-$text-color: #222;
-
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-
-body {
-  // width: 80%;
-  // margin: 1em auto 0;
-}
-
-
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Quicksand:300,400');
-@import "header.scss";
-@import "hero.scss";
-@import "page.scss";
-@import "tables.scss";
-@import "type.scss";
-@import "footer.scss";
-@import "max-width-1139px.scss";
-@import "max-width-851px.scss";
-@import "max-width-639px.scss";

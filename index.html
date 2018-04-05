@@ -1,56 +1,43 @@
 ---
-title: Services
+layout: default
 ---
 
-<section id="two-column" class="clearfix">
-  <h2>{{ page.title }}</h2>
-  <div class="left">
-    <h3>Counseling for individuals coping with:</h3>
-    <ul>
-      <li>Attention-deficit/hyperactivity disorder (ADHD)</li>
-      <li>Anxiety</li>
-      <li>Depression</li>
-      <li>Anger management</li>
-      <li>Grief &amp; loss</li>
-      <li>Self-esteem &amp; identity</li>
-      <li>Emotional regulation</li>
-      <li>Peer problems (such as friendship skills or bullying)</li>
-      <li>Problem-solving strategies</li>
-      <li>Family transitions and changes (such as divorce, siblings, moving)</li>
-    </ul>
-  </div>
-  <div class="right">
-    <h3>Academic support:</h3>
-    <ul>
-      <li>Individualized Educational Plan (IEP) support</li>
-      <li>Study skills</li>
-      <li>Classroom consultations and observations</li>
-      <li>Executive functioning skills (such as time management, test preparation, long-term project management, organization)</li>
-    </ul>
-  </div>
-</section>
-<section class="clearfix" id="why-play-therapy">
-  <h2>Why Play Therapy?</h2>
-  {% for entry in site.data.faqs %}
-    {% if entry.question == "What is play therapy?" %}
-      <p>{{ entry.answer }}</p>
-    {% endif %}
-  {% endfor %}
-  <p></p>
-  <img src="{{ site.baseurl }}/images/play-therapy.png" alt="Why play therapy?" title="Why play therapy?" id="play-therapy-image">
-</section>
-<section>
-  <h2>Get Started!</h2>
-  <section id="call-to-action">
-    <p>I'm delighted to be a part of your family's journey to peace, confidence, and success.</p>
-    <a href="mailto:{{ site.data.contact.email }}"><i class="far fa-envelope fa-fw"></i>&nbsp;Email me today to schedule your consultation</a>
-    <p>Located in River Forest, Illinois&mdash;conveniently accessible for the west Chicago suburbs.</p>
-    <address>
-      {{ site.data.contact.street }}<br>
-      {{ site.data.contact.unit }}<br>
-      {{ site.data.contact.city }}, {{ site.data.contact.state }} {{ site.data.contact.zip }}
-    </address>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.2232379877723!2d-87.8180521847649!3d41.88805587922141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e3527f5e15c65%3A0xa83ee7bb911ccca4!2s7627+Lake+St+%23217%2C+River+Forest%2C+IL+60305!5e0!3m2!1sen!2sus!4v1521747336969" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </section>
+<h2>Experience</h2>
 
+{% for job in site.data.resume.jobs %}
+<section>
+  <h3>{{ job.title }}</h3>
+  <p>{{ job.company }}</p>
+  <p>{{ job.start }}&mdash;{{ job.end }}</p>
+  <p>{{ job.location }}</p>
+  <ul>
+    {% for item in job.description %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
 </section>
+{% endfor %}
+
+<h2>Education</h2>
+
+{% for item in site.data.resume.education %}
+<section>
+  <h3>{{ item.institution }}</h3>
+  <p>{{ item.type }} in {{ item.discipline }}</p>
+  <p>{{ item.location }}</p>
+  <p>{{ item.start }}&mdash;{{ item.end }}</p>
+  <p>{{ item.description }}</p>
+</section>
+{% endfor %}
+
+<h2>Awards</h2>
+
+{% for award in site.data.resume.awards %}
+<section>
+  <h3>{{ award.name }}</h3>
+  <p>{{ award.outcome }}</p>
+  <p>{{ award.date }}</p>
+  <p>{{ award.institution }}</p>
+  <p>{{ award.description }}</p>
+</section>
+{% endfor %}
