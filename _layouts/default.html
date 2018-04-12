@@ -2,23 +2,25 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="{{ page.description }}">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <title>{{ site.title }} - {{ site.slogan }}</title>
   </head>
   <body>
     <header>
-      <h1></h1>
+      <div id="header-content">
+        <h1>{{ site.title }}</h1>
+        <nav>
+          <a href="index.html">R&eacute;sum&eacute;</a>
+          <a href="#">Work Samples</a>
+          <a href="#">Interests</a>
+        </nav>
+      </div>
     </header>
-    <nav>
-      <a href="#">Experience</a>
-      <a href="#">Education</a>
-      <a href="#">Skills</a>
-      <a href="#">Honors</a>
-      <a href="#">Interests</a>
-    </nav>
-    <main>
-      {{ content }}
-    </main>
+    {{ content }}
     <footer>
       <p>&copy; 2018 Tom Drake</p>
       <p>This site was built with the <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> static site generator. All HTML and CSS was hand-coded from scratch by me.</p>

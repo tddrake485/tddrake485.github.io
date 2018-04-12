@@ -2,8 +2,22 @@
 title: CSS file
 ---
 
+$primary: #6E87A3;
+$color-wheel-purple: #9877FF;
+$color-wheel-sand: #FFC4BF;
+$color-wheel-green: #8FBCB4;
+$off-white: #eee;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
+@import "type.scss";
+@import "header.scss";
+@import "resume.scss";

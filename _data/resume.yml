@@ -1,14 +1,23 @@
 jobs:
+  - title: Senior Technical Writer
+    company: Salesforce Commerce Cloud
+    location: Chicago, IL
+    start: April 2018
+    end: current
+    description:
+      - Just started!
   -
     title: Technical Writer
     company: CloudCraze Commerce on Salesforce
     location: Chicago, IL
     start: November 2017
-    end: current
+    end: April 2018
     description:
       - Researched, proposed, and implemented plan for migrating sensitive product documentation content for B2B eCommerce app natively built on Salesforce from Confluence to docs-like-code platform (combining Jekyll, Bitbucket, CloudCannon, and Algolia)
+      - Developed Jekyll-based widgets for toggling versions of a specified topic, showing a list of internal and external resources related to a specified topic, and automating the generation of version-specific table of contents
       - Worked closely with product owners and other stakeholders to evaluate, prioritize, and implement requirements for new documentation platform
       - Collaborated with IT and Salesforce Administrators to test and implement single sign-on (SSO) access to documentation content for users authenticated with Salesforce Community credentials
+      - Curated documentation feedback from authenticated users and prioritized the implementation of that feedback with a Salesforce-based workflow
 
   -
     title: Senior Technical Writer, Product Documentation Strategy
@@ -75,33 +84,32 @@ education:
       After completing two semesters of introductory Latin to complete my foreign language requirement, I enjoyed learning and analyzing the language so much that I chose to take intermediate and advanced classes. We focused on translating original texts and composing analyses of their contents and themes. At the highest level, we partially translated and annotated parts of a document that had no previous translation attributed to it.
 
 skills:
-  -
-    technical:
-      - HTML
-      - CSS
-      - JavaScript
-      - jQuery
-      - Python
-      - DITA
-      - XML
-      - Jekyll
-      - Algolia
-      - Perforce
-      - Bitbucket
-      - Git
-      - Github
-      - Adobe FrameMaker
-      - Adobe Photoshop
-      - Adobe Illustrator
-      - Adobe InDesign
-      - WordPress
-    industrial:
-      - Technical writing
-      - Technical editing
-      - Information architecture
-      - Product documentation strategy
-      - Agile development
-      - Interviewing and recruiting
+  technical:
+    - HTML
+    - CSS
+    - JavaScript
+    - jQuery
+    - Python
+    - DITA
+    - XML
+    - Jekyll
+    - Algolia
+    - Perforce
+    - Bitbucket
+    - Git
+    - Github
+    - Adobe FrameMaker
+    - Adobe Photoshop
+    - Adobe Illustrator
+    - Adobe InDesign
+    - WordPress
+  industrial:
+    - Technical writing
+    - Technical editing
+    - Information architecture
+    - Product documentation strategy
+    - Agile development
+    - Interviewing and recruiting
 
 languages:
   -

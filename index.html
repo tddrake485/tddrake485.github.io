@@ -1,43 +1,61 @@
 ---
 layout: default
+description: Technical communications professional with over 10 years of experience in app software product documentation, information architecture, documentation content strategy, front-end development, UX, agile process, and SME collaboration. Skilled in DITA, XML, Jekyll, HTML, CSS, JavaScript, Adobe Creative Suite, Git, Markdown.
 ---
+<section id="summary">
+  <div id="summary-content">
+    {{ page.description }}
+  </div>
+</section>
+<main>
+  <h2><i class="fas fa-history fa-fw"></i>&nbsp;Experience</h2>
+  {% for job in site.data.resume.jobs %}
+  <section class="resume-section">
+    <div class="resume-date-location">
+      <i class="far fa-calendar-alt fa-fw"></i>
+      <p>{{ job.start }}&mdash;<br>{{ job.end }}</p>
+      <i class="fas fa-map-marker-alt fa-fw"></i>
+      <p>{{ job.location }}</p>
+    </div>
+    <div class="resume-deets">
+      <h3>{{ job.title }}</h3>
+      <h4>{{ job.company }}</h4>
+      <ul>
+        {% for item in job.description %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  {% endfor %}
 
-<h2>Experience</h2>
-
-{% for job in site.data.resume.jobs %}
-<section>
-  <h3>{{ job.title }}</h3>
-  <p>{{ job.company }}</p>
-  <p>{{ job.start }}&mdash;{{ job.end }}</p>
-  <p>{{ job.location }}</p>
+  <h2><i class="fas fa-code fa-fw"></i>&nbsp;Technical Skills</h2>
+  {% for item in site.data.resume.skills.technical %}
   <ul>
-    {% for item in job.description %}
     <li>{{ item }}</li>
-    {% endfor %}
   </ul>
-</section>
-{% endfor %}
+  {% endfor %}
 
-<h2>Education</h2>
+  <h2><i class="fas fa-graduation-cap fa-fw"></i>&nbsp;Education</h2>
+  {% for item in site.data.resume.education %}
+  <section>
+    <h3>{{ item.institution }}</h3>
+    <p>{{ item.type }} in {{ item.discipline }}</p>
+    <p>{{ item.location }}</p>
+    <p>{{ item.start }}&mdash;{{ item.end }}</p>
+    <p>{{ item.description }}</p>
+  </section>
+  {% endfor %}
 
-{% for item in site.data.resume.education %}
-<section>
-  <h3>{{ item.institution }}</h3>
-  <p>{{ item.type }} in {{ item.discipline }}</p>
-  <p>{{ item.location }}</p>
-  <p>{{ item.start }}&mdash;{{ item.end }}</p>
-  <p>{{ item.description }}</p>
-</section>
-{% endfor %}
+  <h2><i class="fas fa-trophy fa-fw"></i>&nbsp;Awards</h2>
+  {% for award in site.data.resume.awards %}
+  <section>
+    <h3>{{ award.name }}</h3>
+    <p>{{ award.outcome }}</p>
+    <p>{{ award.date }}</p>
+    <p>{{ award.institution }}</p>
+    <p>{{ award.description }}</p>
+  </section>
+  {% endfor %}
 
-<h2>Awards</h2>
-
-{% for award in site.data.resume.awards %}
-<section>
-  <h3>{{ award.name }}</h3>
-  <p>{{ award.outcome }}</p>
-  <p>{{ award.date }}</p>
-  <p>{{ award.institution }}</p>
-  <p>{{ award.description }}</p>
-</section>
-{% endfor %}
+</main>
